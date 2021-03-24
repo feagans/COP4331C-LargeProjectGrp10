@@ -8,7 +8,8 @@ Testing discord
 
 1. Make sure the respo is cloned
 2. Navigate to the project folder in the terminal 
-3. Run `npm install` 
-4. Run `npm run start` 
+3. In the terminal navigate to the client folder `cd client`
+4. Run `npm install` 
+5. Run `npm run start` 
 
 
