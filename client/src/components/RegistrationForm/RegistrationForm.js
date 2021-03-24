@@ -86,7 +86,7 @@ function RegistrationForm(props) {
 
                 {/* This is for the Last Name */}  
                 <div className="form-group text-left">
-                    <label htmlFor="lastName">First Name</label>
+                    <label htmlFor="lastName">Last Name</label>
                     <input type="text" 
                         className="form-control" 
                         id="lasttName" 
