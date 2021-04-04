@@ -8,7 +8,7 @@ import Navbar from "./components/Navbar";
 import PrivateRoute from "./utils/PrivateRoute";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import AlertComponent from "./components/AlertComponent/AlertComponent";
-import Deactivate from "./pages/Deactivate";
+import Deactivate from "./components/Deactivate";
 import Email from "./components/Email";
 import Name from "./components/Name";
 import Password from "./components/Password";
@@ -50,6 +50,9 @@ function App() {
             </Route>
             <Route path="/password">
               <Password />
+            </Route>
+            <Route path="/deactivate">
+              <Deactivate />
             </Route>
             <PrivateRoute path="/home">
               <Home />
