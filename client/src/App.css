@@ -8,3 +8,14 @@
   align-items: center;
   background-color: #1e5f74;
 }
+
+span {
+  margin-left: 6px;
+}
+.ChangePassword {
+  display: flex;
+  height: 90vh;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+}
