@@ -4,12 +4,13 @@ import { API_BASE_URL, ACCESS_TOKEN_NAME } from "../constants/apiConstants.js";
 
 import "./Email.css";
 
-function Email(props) {
+function Password(props) {
   // local details
   const [state, setState] = useState({
-    oldEmail: "",
-    newEmail: "",
+    email: "",
+    currentPassword: "",
     confirmPassword: "",
+    newPassword: "",
     successMessage: null,
   });
   const handleChange = (e) => {
@@ -24,9 +25,10 @@ function Email(props) {
     e.preventDefault();
     const payload = {
       //needs to be changed to email maybe.
-      oldEmail: state.oldEmail,
-      newEmail: state.newEmail,
+      email: state.email,
+      currentPassword: state.currentPassword,
       confirmPassword: state.confirmPassword,
+      newPassword: state.newPassword,
     };
     axios
       .post(API_BASE_URL + "/api/login", payload)
@@ -62,35 +64,35 @@ function Email(props) {
         <div class="grid-item">
           <form onSubmit={submitHandler}>
             <div className="form-inner">
-              <h2>Update Email</h2>
+              <h2>Update Password</h2>
               <div class="form-group">
-                <label htmlFor="newEmail">New Email</label>
+                <label htmlFor="email">Email</label>
                 <input
                   type="text"
-                  name="newEmail"
-                  id="newEmail"
-                  value={state.newEmail}
+                  name="email"
+                  id="email"
+                  value={state.email}
                   onChange={handleChange}
                 />
               </div>
               <div class="form-group">
-                <label htmlFor="oldEmail">Old Email</label>
+                <label htmlFor="currentPassword">Current Password</label>
                 <input
                   type="text"
-                  name="oldEmail"
-                  id="oldEmail"
-                  value={state.oldEmail}
+                  name="currentPassword"
+                  id="currentPassword"
+                  value={state.currentPassword}
                   onChange={handleChange}
                 />
               </div>
               <h3>To verify your identity, please enter your password</h3>
               <div class="form-group">
-                <label htmlFor="password">Password</label>
+                <label htmlFor=" newPassword">New Password</label>
                 <input
                   type="password"
-                  name="password"
-                  id="password"
-                  value={state.email}
+                  name=" newPassword"
+                  id=" newPassword"
+                  value={state.newPassword}
                   onChange={handleChange}
                 />
               </div>
@@ -107,4 +109,4 @@ function Email(props) {
   );
 }
 
-export default Email;
+export default Password;

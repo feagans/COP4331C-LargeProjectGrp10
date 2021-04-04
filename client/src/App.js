@@ -10,7 +10,8 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import AlertComponent from "./components/AlertComponent/AlertComponent";
 import Deactivate from "./pages/Deactivate";
 import Email from "./components/Email";
-import UpdateName from "./pages/UpdateName";
+import Name from "./components/Name";
+import Password from "./components/Password";
 
 function App() {
   const [title, updateTitle] = useState(null);
@@ -43,6 +44,12 @@ function App() {
             </Route>
             <Route path="/email">
               <Email />
+            </Route>
+            <Route path="/name">
+              <Name />
+            </Route>
+            <Route path="/password">
+              <Password />
             </Route>
             <PrivateRoute path="/home">
               <Home />

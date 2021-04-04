@@ -4,11 +4,11 @@ import { API_BASE_URL, ACCESS_TOKEN_NAME } from "../constants/apiConstants.js";
 
 import "./Email.css";
 
-function Email(props) {
+function Name(props) {
   // local details
   const [state, setState] = useState({
-    oldEmail: "",
-    newEmail: "",
+    oldName: "",
+    newName: "",
     confirmPassword: "",
     successMessage: null,
   });
@@ -24,8 +24,8 @@ function Email(props) {
     e.preventDefault();
     const payload = {
       //needs to be changed to email maybe.
-      oldEmail: state.oldEmail,
-      newEmail: state.newEmail,
+      oldName: state.oldName,
+      newName: state.newName,
       confirmPassword: state.confirmPassword,
     };
     axios
@@ -62,24 +62,24 @@ function Email(props) {
         <div class="grid-item">
           <form onSubmit={submitHandler}>
             <div className="form-inner">
-              <h2>Update Email</h2>
+              <h2>Update Name</h2>
               <div class="form-group">
-                <label htmlFor="newEmail">New Email</label>
+                <label htmlFor="newEmail">New Name</label>
                 <input
                   type="text"
-                  name="newEmail"
-                  id="newEmail"
-                  value={state.newEmail}
+                  name="newName"
+                  id="newName"
+                  value={state.newName}
                   onChange={handleChange}
                 />
               </div>
               <div class="form-group">
-                <label htmlFor="oldEmail">Old Email</label>
+                <label htmlFor="oldEmail">Old Name</label>
                 <input
                   type="text"
-                  name="oldEmail"
-                  id="oldEmail"
-                  value={state.oldEmail}
+                  name="oldName"
+                  id="oldName"
+                  value={state.oldName}
                   onChange={handleChange}
                 />
               </div>
@@ -107,4 +107,4 @@ function Email(props) {
   );
 }
 
-export default Email;
+export default Name;
