@@ -12,6 +12,7 @@ import Deactivate from "./components/Deactivate";
 import Email from "./components/Email";
 import Name from "./components/Name";
 import Password from "./components/Password";
+import Friends from "./components/Friends";
 
 function App() {
   const [title, updateTitle] = useState(null);
@@ -35,6 +36,12 @@ function App() {
             </Route>
             <Route path="/login">
               <LoginForm
+                showError={updateErrorMessage}
+                updateTitle={updateTitle}
+              />
+            </Route>
+            <Route path="/friends">
+              <Friends
                 showError={updateErrorMessage}
                 updateTitle={updateTitle}
               />
