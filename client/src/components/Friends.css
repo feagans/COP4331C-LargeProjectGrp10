@@ -10,8 +10,13 @@
   position: relative;
   align-self: center;
   top: -200px;
+  color: white;
 }
 .searchBar::placeholder {
   /* Chrome, Firefox, Opera, Safari 10.1+ */
   opacity: 1; /* Firefox */
+}
+.button {
+  margin-top: 20px;
+  padding: 10px 10px;
 }

@@ -1,4 +1,5 @@
 import React from "react";
+import "./Popup.js";
 import "./Friends.css";
 import { makeStyles } from "@material-ui/core/styles";
 import Card from "@material-ui/core/Card";
@@ -7,10 +8,14 @@ import CardContent from "@material-ui/core/CardContent";
 import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
 import Grid from "@material-ui/core/Grid";
+import { useState } from "react";
+import Popup from "./Popup.js";
 const useStyles = makeStyles({
   root: {
     minWidth: 150,
     margin: "0 20px",
+    backgroundColor: "#1E5F74",
+    color: "#FFFF",
   },
   bullet: {
     display: "inline-block",
@@ -26,6 +31,7 @@ const useStyles = makeStyles({
 });
 
 function Friends() {
+  const [buttonPopup, setButtonPopup] = useState(false);
   const classes = useStyles();
   const bull = <span className={classes.bullet}>•</span>;
   return (
@@ -50,7 +56,7 @@ function Friends() {
                 John Doe
               </Typography>
               <Typography variant="body2" component="p">
-                Johns dream is to see Japan
+                John's dream is to see Japan
               </Typography>
             </CardContent>
           </Card>
@@ -94,6 +100,12 @@ function Friends() {
           </Card>
         </Grid>
       </Grid>
+      <button className="button" onClick={() => setButtonPopup(true)}>
+        Add new Friend
+      </button>
+      <Popup trigger={buttonPopup} setTrigger={setButtonPopup}>
+        <h3></h3>
+      </Popup>
     </div>
   );
 }
