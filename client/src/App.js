@@ -40,15 +40,14 @@ function App() {
                 updateTitle={updateTitle}
               />
             </Route>
+
             <Route path="/friends">
               <Friends
                 showError={updateErrorMessage}
                 updateTitle={updateTitle}
               />
             </Route>
-            <Route path="/navbar">
-              <Navbar updateTitle="" />
-            </Route>
+
             <Route path="/email">
               <Email />
             </Route>
@@ -68,6 +67,7 @@ function App() {
               <Home />
             </PrivateRoute>
           </Switch>
+          <Navbar />
           <AlertComponent
             errorMessage={errorMessage}
             hideError={updateErrorMessage}

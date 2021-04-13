@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import { SidebarData } from "./SidebarData";
 
 function clickMe() {
-  alert("You Clicked me");
+  alert("This will take back to main");
 }
 function Navbar() {
   return (

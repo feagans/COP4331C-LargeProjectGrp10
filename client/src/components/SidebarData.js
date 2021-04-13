@@ -6,25 +6,25 @@ import * as CgIcons from "react-icons/cg";
 export const SidebarData = [
   {
     title: "ChangePassword",
-    path: "/",
+    path: "/password",
     icon: <CgIcons.CgPassword />,
     cName: "nav-text",
   },
   {
     title: "UpdateEmail",
-    path: "/",
+    path: "/email",
     icon: <AiIcons.AiOutlineMail />,
     cName: "nav-text",
   },
   {
     title: "UpdateName",
-    path: "/",
+    path: "/name",
     icon: <IoIcons.IoMdPerson />,
     cName: "nav-text",
   },
   {
     title: "Deactivate",
-    path: "/",
+    path: "/deactivate",
     icon: <AiIcons.AiFillDelete />,
     cName: "nav-text",
   },
