@@ -7,9 +7,9 @@ import "./Email.css";
 function Email(props) {
   // local details
   const [state, setState] = useState({
-    oldEmail: "",
+    email: "",
     newEmail: "",
-    confirmPassword: "",
+    password: "",
     successMessage: null,
   });
   const handleChange = (e) => {
@@ -23,13 +23,12 @@ function Email(props) {
   const handleSubmitClick = (e) => {
     e.preventDefault();
     const payload = {
-      //needs to be changed to email maybe.
-      oldEmail: state.oldEmail,
+      email: state.email,
       newEmail: state.newEmail,
-      confirmPassword: state.confirmPassword,
+      password: state.password,
     };
     axios
-      .post(API_BASE_URL + "/api/login", payload)
+      .post(API_BASE_URL + "//api/change-email", payload)
       .then(function (response) {
         if (response.status === 200) {
           setState((prevState) => ({
@@ -77,9 +76,9 @@ function Email(props) {
                 <label htmlFor="oldEmail">Old Email</label>
                 <input
                   type="text"
-                  name="oldEmail"
-                  id="oldEmail"
-                  value={state.oldEmail}
+                  name="email"
+                  id="email"
+                  value={state.email}
                   onChange={handleChange}
                 />
               </div>
@@ -90,7 +89,7 @@ function Email(props) {
                   type="password"
                   name="password"
                   id="password"
-                  value={state.email}
+                  value={state.password}
                   onChange={handleChange}
                 />
               </div>

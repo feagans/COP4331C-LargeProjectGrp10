@@ -22,10 +22,4 @@ export const SidebarData = [
     icon: <IoIcons.IoMdPerson />,
     cName: "nav-text",
   },
-  {
-    title: "Deactivate",
-    path: "/deactivate",
-    icon: <AiIcons.AiFillDelete />,
-    cName: "nav-text",
-  },
 ];
