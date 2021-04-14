@@ -6,14 +6,14 @@
   justify-content: center;
   position: fixed;
   top: 0;
-  left: -50px;
+  left: -60px;
 }
 
 .nav-text {
   display: flex;
   justify-content: start;
   align-items: center;
-  padding: 8px 0px 8px 16px;
+  padding: 8px 4px 8px 14px;
   list-style-type: none;
   height: 80px;
 }
