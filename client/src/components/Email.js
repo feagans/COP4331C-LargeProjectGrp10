@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import { API_BASE_URL, ACCESS_TOKEN_NAME } from "../constants/apiConstants.js";
+import { ACCESS_TOKEN_NAME } from "../constants/apiConstants.js";
 
 import "./Email.css";
 
