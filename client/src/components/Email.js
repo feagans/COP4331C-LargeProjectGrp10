@@ -28,7 +28,7 @@ function Email(props) {
       password: state.password,
     };
     axios
-      .post(API_BASE_URL + "//api/change-email", payload)
+      .post("/api/change-email", payload)
       .then(function (response) {
         if (response.status === 200) {
           setState((prevState) => ({
